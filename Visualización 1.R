@@ -124,9 +124,33 @@ concentrado2020 %>%
     plot.caption = element_text(face = "italic")
   )
 
+#También podemos hacer un boxplot
+anotaciones <- data.frame(
+  x = c(round(min(concentrado2020$edad_jefe), 2), round(mean(concentrado2020$edad_jefe), 2), round(max(concentrado2020$edad_jefe), 2)),
+  y = c(-0.37, 0.4, -0.37),
+  label = c("Min:", "Media:", "Max:")
+) 
+
+concentrado2020 %>% 
+  ggplot(aes(x=edad_jefe)) +
+  geom_boxplot(color="#000000", fill="darkblue") +
+  theme_classic()+
+  geom_text(data = anotaciones, aes(x = x, y = y, label = paste(label, x)), size = 3.5, fontface = "bold")+
+  labs(
+    x = "Edad del jefe del hogar",
+    y = "",
+    title = "Edades de los jefes y jefas de hogar en México, 2020",
+    caption = "Fuente: elaboración propia con base en ENIGH 2020"
+  )+ 
+  theme(
+    plot.title = element_text(color = "darkgreen", size = 14, face = "bold"),
+    plot.caption = element_text(face = "italic")
+  )
+
 # El paquete esquisse es una forma de graficar de forma más sencilla
 
-#Práctica en clase: elaboren un histograma o un diagrama de densidad con una variable cuantitativa que seleccionen.
+
+#Práctica en clase: elaboren un histograma, diagrama de caja y brazos o un diagrama de densidad con una variable cuantitativa que seleccionen.
 #Modifiquen los colores, etiquetas, eje y, eje x, título, fuente, etc.
 
 
