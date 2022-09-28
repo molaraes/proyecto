@@ -129,3 +129,6 @@ concentrado2020 %>%
     plot.caption = element_text(face = "italic")
   )
 
+
+#Práctica, escoge una variable cualitativa y elabora tu gráfico.
+
