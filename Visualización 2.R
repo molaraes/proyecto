@@ -30,8 +30,7 @@ concentrado2020 %>%
 
 #Aunque, se ve mejor como estaba antes.
 
-#Ahora, recordemos que podemos usar las etiquetas del sexo jefe que habíamos creado anteriormente
-#Para hacer nuestra gráfica de barras, convertiremos nuestra variable sexo_jefe en factor
+#Para hacer nuestra gráfica de barras y que se vean las etiquetas con facilidad, convertiremos nuestra variable sexo_jefe en factor
 concentrado2020 <- concentrado2020 %>% 
   mutate(sexo_factor = factor(concentrado2020$sexo_jefe, labels = c("Hombre", "Mujer")))
 
