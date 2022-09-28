@@ -42,7 +42,7 @@ concentrado2020 <- haven::read_dta("datos/concentrado2020.dta")
 concentrado2020 %>% 
   ggplot(aes(x=edad_jefe))
 #Ahora agregaremos la geometría
-g<- concentrado2020 %>% 
+concentrado2020 %>% 
   ggplot(aes(x=edad_jefe)) +
   geom_histogram()
 
